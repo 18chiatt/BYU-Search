@@ -22,9 +22,12 @@ export class ResultsComponent implements OnInit {
 	ngOnInit() {
 		this.search.getSearchString().subscribe((res) => {
 			this.search.search(res).subscribe((result) => {
+				if(!result){
+					return;
+				}
 				this.loaded = true;
 				this.result = result;
-				this.itemsToDisplay = this.result.items.slice(0,this.defaultPageSize)
+				this.itemsToDisplay = this.result.items?.slice(0,5) || []
 			});
 		});
 

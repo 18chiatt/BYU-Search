@@ -16,7 +16,6 @@
 			<app-result [toDisplay]="item"></app-result>
 		</ng-container>
 	</div>
-	<mat-paginator [pageSize]="defaultPageSize" [length]="result.items.length" (page)="handlePage($event)"
-					[pageSizeOptions]="options"></mat-paginator>
+	<mat-paginator [pageSize]="5" [length]="result?.items?.length || 0" (page)="handlePage($event)"></mat-paginator>
 
 </ng-container>

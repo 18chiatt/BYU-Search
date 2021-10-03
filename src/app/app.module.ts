@@ -17,6 +17,7 @@ import { ResultComponent } from "./results/result/result.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { HttpClientModule } from "@angular/common/http";
 
 
 
@@ -41,7 +42,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 		MatProgressSpinnerModule,
 		MatTooltipModule,
 		MatSlideToggleModule,
-		MatPaginatorModule
+		MatPaginatorModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],
