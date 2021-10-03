@@ -1,0 +1,39 @@
+
+<div class="result-component">
+<ng-container *ngIf="!designTwo" >
+
+<div class="design-one-holder"	(click)="visit()" matTooltip="{{ format(toDisplay.snippet) }}" matTooltipClass="advanced-tooltip">
+
+		<div class="text-holder">
+			<div class="title"><a href="{{link()}}">{{ toDisplay.title }}</a></div>
+			<!-- <div class="sub-text">{{ toDisplay.snippet }}</div> -->
+		</div>
+	
+		<img src="{{ toDisplay?.pagemap.cse_thumbnail[0].src }}"
+			*ngIf="toDisplay?.pagemap.cse_thumbnail && toDisplay?.pagemap.cse_thumbnail[0]?.src"
+			class="image"/>
+</div>
+
+</ng-container>
+
+
+<ng-container *ngIf="designTwo">
+	<div class="design-two-holder">
+		<img src="{{ toDisplay?.pagemap.cse_thumbnail[0].src }}"
+		*ngIf="toDisplay?.pagemap.cse_thumbnail && toDisplay?.pagemap.cse_thumbnail[0]?.src"
+		class="image"/>
+
+		<div class="spacer" *ngIf="!toDisplay?.pagemap.cse_thumbnail || !toDisplay?.pagemap.cse_thumbnail[0]?.src">
+			<mat-icon>image_not_supported</mat-icon>
+		</div>
+
+		<div >
+			<a href="{{link()}}" class="title">{{ toDisplay.title }}</a>
+			<span class="descripiton">{{ toDisplay.snippet }}</span>
+		</div>
+
+	</div>
+
+</ng-container>
+
+</div>

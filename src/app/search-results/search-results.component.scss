@@ -1,0 +1,42 @@
+.search-holder {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.search-field {
+		font-size: 20px;
+		width: 40%;
+	
+		.mat-form-field-wrapper {
+			padding-bottom: 0;
+		}
+	}
+	
+	.left {
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	
+	.right {
+		margin-left: auto;
+		align-self: center;
+	}
+	
+	.left-side {
+		display: inline;
+	}
+	
+	.right-side {
+		width: 10%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	.keywords {
+		font-size: 30px;
+		font-weight: bold;
+		margin-right: 20px;
+	}
+}
+
+

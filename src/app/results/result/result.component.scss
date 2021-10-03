@@ -1,0 +1,84 @@
+
+.result-component {
+	.design-one-holder {
+		margin-bottom: 20px;
+		background-color: #efefef;
+		margin-top: 10px;
+		cursor: pointer;
+		display: flex;
+		border-radius: 10px;
+		align-items: center;
+		padding: 20px;
+		justify-content: space-between;
+
+		.image {
+			max-width: 50px;
+			max-height: 50px;
+			border-radius: 25px;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+	
+		.spacer {
+			width: 70px;
+			margin-left: 20px;
+		}
+	
+		.title {
+			font-size: 25px;
+		}
+	
+		.sub-text {
+			color: darkgray;
+		}
+	}
+
+	.design-two-holder {
+		margin-top: 20px;
+		// border: 1px solid lightgray;
+		// border-radius: 10px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+
+		.image {
+			max-width: 50px;
+			max-height: 50px;
+			border-radius: 25px;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+
+		.spacer {
+			width: 90px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.mat-icon {
+				font-size: 30px;
+				color: lightgray;
+			}
+		}
+
+		.title {
+			font-size: 25px;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.description {
+			font-size: 14px;
+		}
+
+	}
+
+	
+}
+
+.advanced-tooltip {
+	font-size: 20px;
+	min-width: 500px;
+	max-width: 600px !important;
+}

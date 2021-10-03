@@ -1,0 +1,82 @@
+.top-bar-flex {
+	background-color: #002e5d;
+	padding: 10px 40px;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+}
+
+.centerer {
+	display: flex;
+	align-items: center;
+}
+
+.smaller-image {
+	height: 19px;
+	margin: 16px 8px 19px 0;
+	display: inline;
+}
+
+.cs-text {
+	color: #fff;
+	text-decoration: none;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.left-side {
+	display: inline;
+}
+.right-side {
+	display: flex;
+	height: 100%;
+	align-items: flex-start;
+	margin-top: 5px;
+}
+
+.clickable {
+	cursor: pointer;
+	display: flex;
+}
+
+.sign-in {
+	display: inline;
+	color: white;
+	font-size: 20px;
+	margin-right: 40px;
+}
+
+.sign-in:hover {
+	text-decoration: underline;
+}
+
+.icon-left {
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+
+.input {
+	height: 27px;
+	width: 300px;
+	font-size: 25px;
+	padding: 3px;
+	border-color: white;
+}
+
+.search-button {
+	height: 37px;
+	width: 50px;
+	position: relative;
+	right: 2px;
+}
+
+.search {
+	display: flex;
+	align-items: flex-start;
+}
+
+.search-icon {
+	font-size: 30px;
+}

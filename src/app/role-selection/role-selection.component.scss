@@ -1,0 +1,17 @@
+.bar {
+	display: flex;
+	border-bottom: 1px solid #dae5f0;
+}
+
+.section {
+	border-right: 1px solid #dae5f0;
+	width: 17%;
+	font-size: 25px;
+	padding: 30px 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.section:hover {
+	background-color: #dae5f0;
+}

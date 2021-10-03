@@ -1,0 +1,22 @@
+<div *ngIf="!loaded" class="centered">
+	<mat-spinner class="centered"></mat-spinner>
+</div>
+
+<ng-container *ngIf="loaded">
+	<div class="header">
+		<div class="heading">Results:</div>
+		<div class="sub-text">
+			<span class="inline">{{ result.searchInformation.totalResults }} results in</span>
+			<span class="inline">{{ result.searchInformation.formattedSearchTime }} seconds</span>
+		</div>
+	</div>
+
+	<div class="body" >
+		<ng-container *ngFor="let item of itemsToDisplay">
+			<app-result [toDisplay]="item"></app-result>
+		</ng-container>
+	</div>
+	<mat-paginator [pageSize]="defaultPageSize" [length]="result.items.length" (page)="handlePage($event)"
+					[pageSizeOptions]="options"></mat-paginator>
+
+</ng-container>

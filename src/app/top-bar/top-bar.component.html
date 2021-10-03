@@ -1,0 +1,27 @@
+<div class="top-bar-flex">
+	<div class="left-side">
+		<div (click)="returnToMain()" class="clickable">
+			<img
+				class="smaller-image"
+				src="https://cdn.byu.edu/shared-icons/latest/logos/monogram-white.svg"
+			/>
+			<div class="centerer">
+				<span class="cs-text">Computer Science</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="right-side">
+		<div class="sign-in">
+			<mat-icon class="icon-left">account_circle</mat-icon>SIGN IN
+		</div>
+
+		<div class="search">
+			<input type="text" class="input" [(ngModel)]="query" />
+
+			<button class="search-button" (click)="searchCurr()">
+				<mat-icon class="search-icon">search</mat-icon>
+			</button>
+		</div>
+	</div>
+</div>
