@@ -1,9 +1,20 @@
 <div class="search-holder">
 	<span class="keywords">Keywords:</span>
-	<mat-form-field appearance="outline" class="search-field">
-		<input type="text" matInput [formControl]="myControl" />
-		<mat-icon matSuffix class="left" (click)="newSearch()">search</mat-icon>
-	</mat-form-field>
+	<div class="column">
+		<mat-form-field appearance="outline" class="search-field">
+			<input type="text" matInput [formControl]="myControl" />
+			<mat-icon matSuffix class="left" (click)="newSearch()">search</mat-icon>
+		</mat-form-field>
+
+		<a [matMenuTriggerFor]="menu" class="clickable">Advanced Search<mat-icon class="expand-more">expand_more</mat-icon> </a>
+
+		<mat-menu #menu="matMenu" >
+			<advanced-search></advanced-search>
+
+		</mat-menu>
+
+	</div>
+
 	<mat-slide-toggle (click)="update()" class="right"> <span *ngIf="!designTwo">Design One</span> <span *ngIf="designTwo">Design Two</span> </mat-slide-toggle>
 
 </div>

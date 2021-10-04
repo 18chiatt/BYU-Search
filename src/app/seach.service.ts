@@ -33,8 +33,20 @@ export class SearchService {
 		return this.searchStringSubject;
 	}
 
+	pendingSearch: string = ''
+
+	public setPendingSearch(val: string) {
+		this.pendingSearch = val;
+	}
+
+	public getPendingSearch(): string {
+		return this.pendingSearch;
+	}
+
 	public navToSearch(val: string) {
-		this.router.navigate([], { queryParams: { q: val } });
+		const existing = {...this.route.snapshot.queryParams};
+		existing['q'] = val;
+		this.router.navigate([], { queryParams: existing });
 	}
 
 	getKey(): string{
@@ -46,11 +58,35 @@ export class SearchService {
 		return ('ca8c3d7f' + ',lmnop,' + '40d050e3e').split(',').filter((curr, index) => index !== 1).join('')
 	}
 
+	public static readonly formatters: Map<string, (string: string)=> string>  = {
+		'ed': (val) => `before:${val}`,
+		'sd': (val) => `after:${val}`,
+		'p': (val) => 'professor',
+		'c': (val) => 'course',
+		'e': (val) => 'event',
+		's': (val) => 'scholarship',
+		'j': (val)=> 'job'
+
+	} as any;
+
 	public search(query: string): Observable<SearchResult> {
+		const sections: string[] = [query];
+		const paramMap = this.route.snapshot.queryParamMap;
+		console.log(SearchService.formatters)
+		for(const key in SearchService.formatters) {
+			console.log(key,"abc")
+			if(paramMap.get(key) !== null){
+				const val = paramMap.get(key);
+				sections.push(SearchService.formatters[key](val));
+			}
+		}
+		const fullQuery = sections.join(' ');
+
 		if(!query){
 			return of (null);
 		}
-		const params = new HttpParams().set('key', this.getKey()).set('cx', this.getCX()).set('q', query)
+
+		const params = new HttpParams().set('key', this.getKey()).set('cx', this.getCX()).set('q', fullQuery)
 		return this.http.get<SearchResult>('https://www.googleapis.com/customsearch/v1', {params})
 		
 	}

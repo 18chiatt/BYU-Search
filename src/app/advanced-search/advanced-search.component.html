@@ -1,0 +1,31 @@
+<div class="container" >
+    <div class="column" (click) = "$event.stopPropagation()"> 
+            <mat-form-field appearance='outline'>
+                <mat-label>Start Date</mat-label>
+                <input  matInput [formControl]="start" [matDatepicker]="picker1">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+
+
+            <mat-form-field appearance='outline' >
+                <mat-label>End Date</mat-label>
+                <input matInput [formControl]="end" [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+
+    </div>
+
+    <div class="column" (click) = "$event.stopPropagation()">
+        <mat-checkbox [(ngModel)]="p">Professors</mat-checkbox>
+        <mat-checkbox [(ngModel)]="c">Courses</mat-checkbox>
+        <mat-checkbox [(ngModel)]="e">Events</mat-checkbox>
+        <mat-checkbox [(ngModel)]="s">Scholarships</mat-checkbox>
+        <mat-checkbox [(ngModel)]="j">Jobs</mat-checkbox>
+    </div>
+    
+    <div class="close-button"> <button mat-raised-button color="primary" (click)="setParams()">Filter</button> </div>
+
+</div>
+

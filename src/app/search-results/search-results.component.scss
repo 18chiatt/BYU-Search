@@ -5,11 +5,28 @@
 
 	.search-field {
 		font-size: 20px;
-		width: 40%;
+		width: 100%;
+		display: block;
 	
 		.mat-form-field-wrapper {
 			padding-bottom: 0;
 		}
+	}
+
+	.clickable {
+		cursor: pointer;
+		text-decoration: underline;
+
+	}
+
+	.expand-more {
+		font-size: 15px;
+		position: relative;
+		top: 3px;
+	}
+
+	.column {
+		width: 40%;
 	}
 	
 	.left {
@@ -37,6 +54,10 @@
 		font-weight: bold;
 		margin-right: 20px;
 	}
+}
+
+.mat-menu-panel.ng-trigger {
+	max-width: unset;
 }
 
 

@@ -16,6 +16,10 @@ export class SearchComponent implements OnInit {
 		this.search.getSearchString().subscribe((newQuery) => {
 			this.myControl.setValue(newQuery);
 		});
+
+		this.myControl.valueChanges.subscribe(newVal => {
+			this.search.setPendingSearch(this.myControl.value)
+		})
 	}
 
 	newSearch() {

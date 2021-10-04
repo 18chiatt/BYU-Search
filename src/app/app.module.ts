@@ -18,6 +18,15 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from "@angular/common/http";
+import { AdvancedSearchComponent } from "./advanced-search/advanced-search.component";
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from "@angular/material/button";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from "@angular/material/core";
+
+
+
 
 
 
@@ -29,6 +38,7 @@ import { HttpClientModule } from "@angular/common/http";
 		SearchComponent,
 		ResultsComponent,
 		ResultComponent,
+		AdvancedSearchComponent
 	],
 	imports: [
 		BrowserModule,
@@ -43,7 +53,12 @@ import { HttpClientModule } from "@angular/common/http";
 		MatTooltipModule,
 		MatSlideToggleModule,
 		MatPaginatorModule,
-		HttpClientModule
+		HttpClientModule,
+		MatMenuModule,
+		MatCheckboxModule,
+		MatButtonModule,
+		MatDatepickerModule,
+		MatNativeDateModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

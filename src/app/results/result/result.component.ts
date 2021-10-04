@@ -24,7 +24,7 @@ export class ResultComponent implements OnInit {
 	}
 
 	link() {
-		return this.toDisplay.htmlFormattedUrl;
+		return this.toDisplay.formattedUrl;
 	}
 
 	format(str: string): string {
