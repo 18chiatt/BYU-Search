@@ -4,7 +4,7 @@
 
 <ng-container *ngIf="loaded">
 	<div class="header">
-		<div class="heading">Results:</div>
+		<div class="heading">Results</div>
 		<div class="sub-text">
 			<span class="inline">{{ result.searchInformation.totalResults }} results in</span>
 			<span class="inline">{{ result.searchInformation.formattedSearchTime }} seconds</span>
@@ -16,6 +16,6 @@
 			<app-result [toDisplay]="item"></app-result>
 		</ng-container>
 	</div>
-	<mat-paginator [pageSize]="5" [length]="result?.items?.length || 0" (page)="handlePage($event)"></mat-paginator>
+	<mat-paginator [pageSize]="10" [length]="result?.items?.length || 0" (page)="handlePage($event)"></mat-paginator>
 
 </ng-container>

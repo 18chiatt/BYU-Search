@@ -1,16 +1,25 @@
 .search-holder {
 	width: 100%;
-	display: flex;
-	align-items: center;
+	justify-content: center;
+	padding: auto;
+	margin-top: 40px;
 
 	.search-field {
-		font-size: 20px;
+		font-size: 14px;
 		width: 100%;
 		display: block;
 	
 		.mat-form-field-wrapper {
 			padding-bottom: 0;
 		}
+	}
+
+
+	.holder-holder {
+		margin: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.clickable {
@@ -51,8 +60,11 @@
 	
 	.keywords {
 		font-size: 30px;
-		font-weight: bold;
-		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+
+	.search-holder {
+		background-color: #FFEEAA;
 	}
 }
 

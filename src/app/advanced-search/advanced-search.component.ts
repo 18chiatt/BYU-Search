@@ -41,12 +41,9 @@ export class AdvancedSearchComponent implements OnInit {
             for(const booleanKey of this.booleanKeys) {
                 this[booleanKey] = !!queryParamMap.get(booleanKey);
             }
-
             // data race action to avoid populating before route is ready
 
         }, 100)
-
-
 
     }
 

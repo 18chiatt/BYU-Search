@@ -18,11 +18,11 @@
     </div>
 
     <div class="column" (click) = "$event.stopPropagation()">
-        <mat-checkbox [(ngModel)]="p">Professors</mat-checkbox>
-        <mat-checkbox [(ngModel)]="c">Courses</mat-checkbox>
-        <mat-checkbox [(ngModel)]="e">Events</mat-checkbox>
-        <mat-checkbox [(ngModel)]="s">Scholarships</mat-checkbox>
-        <mat-checkbox [(ngModel)]="j">Jobs</mat-checkbox>
+        <mat-checkbox [(ngModel)]="p" color="primary">Professors</mat-checkbox>
+        <mat-checkbox [(ngModel)]="c" color="primary">Courses</mat-checkbox>
+        <mat-checkbox [(ngModel)]="e" color="primary">Events</mat-checkbox>
+        <mat-checkbox [(ngModel)]="s" color="primary">Scholarships</mat-checkbox>
+        <mat-checkbox [(ngModel)]="j" color="primary">Jobs</mat-checkbox>
     </div>
     
     <div class="close-button"> <button mat-raised-button color="primary" (click)="setParams()">Filter</button> </div>

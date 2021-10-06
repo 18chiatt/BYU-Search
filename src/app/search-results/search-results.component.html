@@ -1,5 +1,6 @@
 <div class="search-holder">
-	<span class="keywords">Keywords:</span>
+	<div class="holder-holder">
+	<span class="keywords">Search</span>
 	<div class="column">
 		<mat-form-field appearance="outline" class="search-field">
 			<input type="text" matInput [formControl]="myControl" />
@@ -14,7 +15,8 @@
 		</mat-menu>
 
 	</div>
+	</div>
 
-	<mat-slide-toggle (click)="update()" class="right"> <span *ngIf="!designTwo">Design One</span> <span *ngIf="designTwo">Design Two</span> </mat-slide-toggle>
+	<!-- <mat-slide-toggle (click)="update()" class="right" color="primary"> <span *ngIf="!designTwo">Design One</span> <span *ngIf="designTwo">Design Two</span> </mat-slide-toggle> -->
 
 </div>

@@ -14,7 +14,6 @@ export class ResultsComponent implements OnInit {
 	result: SearchResult = null;
 
 	readonly defaultPageSize = 10;
-	readonly options = [5,10,25,50]
 
 	itemsToDisplay: any[] = [];
 	designTwo :boolean = false;
@@ -27,7 +26,7 @@ export class ResultsComponent implements OnInit {
 				}
 				this.loaded = true;
 				this.result = result;
-				this.itemsToDisplay = this.result.items?.slice(0,5) || []
+				this.itemsToDisplay = this.result.items?.slice(0,this.defaultPageSize) || []
 			});
 		});
 
